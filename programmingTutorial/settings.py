@@ -28,7 +28,7 @@ DEBUG = False
 # SECURE_SSL_REDIRECT = True
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', '.herokuapp.com']
 
 
 # Application definition
