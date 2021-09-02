@@ -1,0 +1,62 @@
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+        <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link"  style="color:white;" href="{% url 'tutorialMain:homeIndex' %}">Home</a>
+    </div>
+  </div>
+</nav>
+
+ <div class="col-12" style="top: 30px;margin: 1px auto;">
+          <h1 style="text-align:center;">Programming Tutorial</h1>
+  </div>
+<br><br>
+
+{% block content %}
+
+{% endblock %}
+
+ <div class="footer">
+        <p style="text-align: center;padding-top: 10px; color:white;">Made with <strike style="color: #ffffff;">❤️</strike> 🥛🥛 by
+            Arsh
+        </p>
+    </div>
+
+
+{% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> {% endcomment %}
+{% comment %} <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script> {% endcomment %}
+{% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script> {% endcomment %}
+        </body>
+</html>
+
+<style>
+
+.footer {
+    
+    width: 100%;
+    height: 50px;
+    background-color: #201C29;
+    bottom:0 !important;
+    position: fixed;
+}
+
+.navbar-nav {
+  margin: 1px auto;
+}
+
+#card {
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+  transition: all .5s;
+}
+
+#card:hover {
+    box-shadow: 0 8px 8px rgba(0,0,0,.25);
+    margin: 5px;
+}
+
+</style>

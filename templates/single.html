@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+{% block content %}
+
+<div class="col col-sm-8" style="margin:10px auto;">
+<div class="jumbotron">
+<center><h4>{{ tutorial.title|capfirst }}</h4></center>
+{{ tutorial.body|capfirst|safe }}<br>
+<em><i>{{ tutorial.date_of_published }}</i></em>
+</div>
+</div>
+
+<div class="col-md-8" style="margin:15px auto;">
+<center><h5>Suggestive Tutorial</h5></center><br>
+<div class="row">
+<div class="container">
+<div class="card-deck">
+{% for tutorial in tutorials%}
+  <div class="card border-primary" id="card">
+    <div class="card-body text-center">
+      <a href="{% url 'tutorialMain:singleIndex' tutorial.slug tutorial.pk  %}"><p class="card-text">{{ tutorial.title }}</p></a>
+    </div>
+  </div>
+ {% endfor %} 
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="col col-8" style="margin:2px auto;">
+
+<div class="jumbotron">
+<div class="row" style="margin:2px auto;">
+{% for tutorail in tutorials %}
+  <div class="col-lx-3" style="margin:5px 5px 5px 5px;">
+    <div class="card border-primary" id="card">
+      <div class="card-body">
+      <a href="{% url 'tutorialMain:singleIndex' tutorail.slug tutorail.pk %}"
+        <h5 class="card-title">{{ tutorail.title|capfirst }}</h5>
+        <p class="card-text">{{ tutorail.body|slice:":20"|safe }}</p>
+        <em style="font-size:10px">{{ tutorail.date_of_published }}</em>
+        </a>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+</div>
+</div>
+
+{% endblock %}
